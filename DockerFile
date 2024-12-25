@@ -9,3 +9,9 @@ RUN pip install -r requirements.txt
 
 # Copia todo el contenido del directorio actual al contenedor
 COPY . .
+
+# Expone el puerto que usará la aplicación
+EXPOSE 8080
+
+# Comando por defecto para ejecutar tu aplicación
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]

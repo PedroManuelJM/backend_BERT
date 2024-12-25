@@ -171,4 +171,4 @@ def clasificar():
         return jsonify({"error": "Hubo un problema procesando la solicitud"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000)
